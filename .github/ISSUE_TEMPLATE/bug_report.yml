@@ -1,0 +1,53 @@
+name: Bug report
+description: Report a reproducible problem without sharing sensitive run data.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Remove credentials, private paths, hardware identifiers, prompts, and model responses before posting.
+  - type: input
+    id: version
+    attributes:
+      label: Autotune version
+      placeholder: "0.19.0"
+    validations:
+      required: true
+  - type: input
+    id: llama
+    attributes:
+      label: llama.cpp version or commit
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Sanitized environment
+      description: OS, CPU, GPU, model architecture/quantization, profile, and objective.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Minimal sanitized logs
+      render: shell
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Data review
+      options:
+        - label: I reviewed this report and removed secrets and private run data.
+          required: true

@@ -1,0 +1,23 @@
+# Benchmark and autotune results
+runs/
+unsloth_growing_chat_*.csv
+unsloth_growing_chat_*.json
+
+# Local models and credentials
+*.gguf
+*.safetensors
+.env
+.env.*
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
